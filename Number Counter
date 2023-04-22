@@ -1,0 +1,141 @@
+
+/* 
+Tony Wu
+CS 111B Java
+-------------
+*/
+
+
+import java.util.Scanner;
+
+class name_counter_2
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+
+        int num_integer_of_names;
+        int count = 0;  
+
+        
+        System.out.println("How many names do you want to enter? ");
+
+        while (!scan.hasNextDouble()) {
+            String word = scan.next();
+            System.err.println('"'+ word +'"' + " is not a number");
+            System.out.print("Enter a number: ");
+        }
+
+        num_integer_of_names = scan.nextInt();
+
+        while (num_integer_of_names <= 0) {
+            System.out.println("Please re-enter an integer greater than 0:");
+
+            while (!scan.hasNextDouble()) {
+                String word = scan.next();
+                System.err.println('"'+ word +'"' + " is not a number");
+                System.out.print("Enter a number: ");
+            }
+
+            num_integer_of_names = scan.nextInt();
+
+        }
+
+
+        String[] array_num_of_names = new String[num_integer_of_names]; 
+
+
+        for(int i=0; i < array_num_of_names.length; i++)
+        {
+            System.out.println("Enter a name:");
+            while (scan.hasNextDouble()) {
+                String word = scan.next();
+                System.err.println('"'+ word +'"' + " is an integer, not a name.");
+                System.out.print("Enter a name: ");
+
+            }
+            array_num_of_names[i] = scan.next(); 
+    
+            
+        }
+
+
+
+        System.out.println("Here are the names you entered, in reverse order: ");
+        for (int i = array_num_of_names.length-1; i >= 0; i--) 
+        {
+           System.out.println(array_num_of_names[i]);
+
+
+        }
+
+
+        String longest = get_longest_name(array_num_of_names);
+
+        for(int i = 0; i < longest.length(); i++) {  
+            if(longest.charAt(i) != ' ')  
+                count++;  
+        }  
+          
+        System.out.println("Here is the longest name, with " + count + " characters:");
+        System.out.println(longest);
+
+
+    }
+
+    public static String get_longest_name(String[]array)
+    {
+        int length = 0;
+        String long_name = null;
+        for (String name: array) 
+        {
+            if (length < name.length())
+            {
+                length = name.length();
+                long_name = name;
+            }
+        }
+        return long_name;
+  
+    }   
+
+
+}
+
+/*
+
+----------------
+Sample output #1
+----------------
+How many names do you want to enter? 
+lou
+"lou" is not a number
+Enter a number: 2
+Enter a name:
+lou
+Enter a name:
+tony
+Here are the names you entered, in reverse order:
+tony
+lou
+4
+Here is the longest name, with 4 characters:
+tony
+
+----------------
+Sample output #2
+----------------
+How many names do you want to enter? 
+2
+Enter a name:
+Tony
+Enter a name:
+WU
+Here are the names you entered, in reverse order: 
+WU
+Tony
+4
+Here is the longest name, with 4 characters:      
+Tony
+
+ */
