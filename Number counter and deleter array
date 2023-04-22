@@ -1,0 +1,64 @@
+/* DeleteFromArray example program
+   by Craig Persiko for CS 111A
+
+   Inputs a series of numbers into an array, 
+   then deletes the one specified by the user.
+*/
+
+import java.util.Scanner;
+
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner scan = new Scanner(System.in);
+    int[] nums;  // array reference variable
+    int i, numEntries, numToDelete;
+    
+    System.out.println("How many numbers would you like to enter?");
+    numEntries = scan.nextInt();
+    nums = new int[numEntries];
+    for(i=0; i < numEntries; i++)
+    {
+      System.out.print("Please enter an integer: ");
+      nums[i] = scan.nextInt();
+    }
+  
+    System.out.println("Here is your array of numbers:");
+    outputArray(nums, numEntries);
+    
+    System.out.print("Which number do you want to remove? ");
+    numToDelete = scan.nextInt();
+    
+    for(i=0; i < numEntries; i++)
+      if(nums[i] == numToDelete)
+      {
+        deleteFromArray(nums, i);  // delete element number i from the array
+        numEntries--;  // now we have one fewer element to output
+        // in case there is another copy of numToDelete in the array, we'll keep looping.
+        // since we just moved element i+1 back to element i, we need to check this new element i.
+        i--;
+      }
+
+    System.out.println("Here is the array with " + numToDelete + " removed:");
+    outputArray(nums, numEntries);
+  }
+
+  // output the array, separated by commas:
+  public static void outputArray(int[] nums, int numElements)
+  {   
+    System.out.print(nums[0]); // output first value
+    // output rest of array with commas:
+    for (int i = 1; i < numElements; i++)
+      System.out.print(", " + nums[i]);
+    System.out.println();
+  }
+
+  // remove element indexToDelete from the array a
+  public static void deleteFromArray(int[] a, int indexToDelete)
+  {
+    for(int i=indexToDelete; i < a.length-1; i++)
+      a[i] = a[i+1];
+  }
+
+}
