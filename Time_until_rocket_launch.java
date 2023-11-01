@@ -12,7 +12,7 @@ Program description:
 
 */
 
-
+// Hello tony, good job! I like how you used the switch statement to check for yes or no.
 
 
 import java.util.Scanner;
