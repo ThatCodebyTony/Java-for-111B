@@ -12,8 +12,8 @@ Program description:
 
 */
 
-// Hello tony, good job! I like how you used the switch statement to check for yes or no.
-
+// Hello tony, good job!
+// electric boogalo 2: electric boogalo 
 
 import java.util.Scanner;
 class Time_until_rocket_launch {
