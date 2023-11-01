@@ -4,6 +4,13 @@ class ZodiacGuesser
 {
   public static void main(String[] args) 
   {
+    // we balling dude.
+    // lol we balling dude.
+    // asdf 
+    // hello world
+    // no 
+    
+    System.out.println("Welcome to the Zodiac Guesser!");
 
     int intMonth, days, signInt;
     String dude, stringMonthFromIntMonth;
