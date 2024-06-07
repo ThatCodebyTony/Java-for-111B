@@ -2,7 +2,9 @@
 Tony Wu
 CS 111B Assignment 4
 Count Words and display longest word
+This is a test for Java
 */
+
 
 import java.util.Scanner;
 import java.util.Arrays;
