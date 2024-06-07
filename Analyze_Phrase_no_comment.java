@@ -3,8 +3,13 @@ Tony Wu
 CS 111B Assignment 4
 Count Words and display longest word
 This is a test for Java
+how do we make comments?
+we use // for single line comments
+then we use /* for multi-line comments
+
 */
 
+// Hello testthing this commit
 
 import java.util.Scanner;
 import java.util.Arrays;
