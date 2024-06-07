@@ -6,10 +6,11 @@ This is a test for Java
 how do we make comments?
 we use // for single line comments
 then we use /* for multi-line comments
-
+co-pilot is cool
 */
 
 // Hello testthing this commit
+// final comment
 
 import java.util.Scanner;
 import java.util.Arrays;
