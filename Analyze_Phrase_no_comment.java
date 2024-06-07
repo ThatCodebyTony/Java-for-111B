@@ -8,6 +8,9 @@ we use // for single line comments
 then we use /* for multi-line comments
 co-pilot is cool
 next test is to see if we can commit this
+here is another one.
+and this one
+
 */
 
 // Hello testthing this commit
